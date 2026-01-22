@@ -9,8 +9,10 @@ import Contact from './components/Contact';
 import './global.css';
 
 function App() {
+  const basename = import.meta.env.PROD ? '/portfolio' : '';
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 relative">
         {/* Animated sepia overlay */}
         <div className="absolute inset-0 sepia-shift pointer-events-none"></div>
